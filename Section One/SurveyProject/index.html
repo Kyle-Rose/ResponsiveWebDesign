@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out this form with the required information</p>
+    <form id="survey-form" method="post" action='https://register-demo.freecodecamp.org'>
+      <fieldset>
+        <label id="name-label">Enter Your  Name: <input id="name" name="name" type="text" required placeholder="Name"/></label>
+        <label id="email-label">Enter Your Email: <input id="email" name="email" type="email" required placeholder="Email"/></label>
+        <label id="number-label">Enter Your Age: <input id="number" name="number" type="number" min="1" max="120" placeholder="Age"/></label>
+        <label> What Is Your Experience Level
+        <select id="dropdown">
+          <option value="">Select (one)</option>
+
+            <option value="1">Beginner</option>
+                          <option value="2">Expert</option>
+      </select>
+      </label>
+      <label for="language">What is your favorite language?
+        <label for="Python"><input id="Python" type="radio" name="language-type" value="Python" class="inline" checked /> Python</label>
+        <label for="Java"><input id="Java" type="radio" name="language-type" 
+        value="Java" class="inline" /> Java</label>
+      <label for="Recommend">Would You Recommend Software Engineering To A Friend?
+        <label for="Yes"><input id="Yes" type="radio" name="answer" value="Python" class="inline" checked /> Yes</label>
+        <label for="Java"><input id="Java" type="radio" name="answer" 
+        value="Java" class="inline" /> No</label> 
+       <label for="Recommend">What are your favorite parts of Software Engineering?
+        <label for="Yes"><input id="Yes" type="checkbox" name="answer" value="Python" class="inline" checked /> Problem Solving</label>
+        <label for="Java"><input id="Java" type="checkbox" name="answer" 
+        value="Java" class="inline" /> Challenge</label>  
+        <label>Do you have any othe feedback?<textarea placeholder="Enter feedback here..."></textarea>
+        <input id="submit" type="submit">
+      </form>
+    </fieldset>
+  </body>
+</html>
