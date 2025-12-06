@@ -9,6 +9,11 @@ table{
   width: 80%; 
 }
 
+table, th, td {
+  text-align: center;
+  vertical-align: middle;
+}
+
 tr[class="read"] {
   background-image: linear-gradient(white, green);
 }
