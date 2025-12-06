@@ -1,74 +1,60 @@
 body {
-  display: flex; flex-direction: column; justify-content: center; 
-  align-items: center; 
-  margin: 50px;
+  margin: 0;
+  background: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-table{
-  border-collapse: collapse;
-  width: 80%; 
+#playing-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-table, th, td {
-  text-align: center;
-  vertical-align: middle;
-}
-
-tr[class="read"] {
-  background-image: linear-gradient(white, green);
-}
-
-tr[class="to-read"] {
-  background-image: linear-gradient(white, red);
-}
-
-tr[class="in-progress"] {
-  background-image: linear-gradient(white, yellow);
-}
-
-span {
-  display: inline-block;
-}
-
-tr[class="to-read"] span[class="status"] {
+.card {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  height: 200px;
   border: 1px solid black;
-  background-image: linear-gradient(rgb(247, 209, 209), red);
+  box-shadow: 0px 0px 5px black;
+  font-size: 30px;
+  background: white;
 }
 
-tr[class="read"] span[class="status"] {
-  border: 1px solid black;
-  background-image: linear-gradient(rgb(182, 226, 185), green);
+#playing-cards .card:nth-child(3) {
+  color: red;
+  font-size: 30px;
 }
 
-tr[class="in-progress"] span[class="status"] {
-  border: 1px solid black;
-  background-image: linear-gradient(rgb(224, 226, 182), yellow);
+.left {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
 }
 
-span[class="status"],
-span[class^="rate"] {
-  height: auto;
-  width: auto;
-  padding: 2px;
+.right {
+  align-self: flex-end;
+  transform: rotate(180deg);
 }
 
-span[class^="rate"] > span {
-  border: 5px solid black;
-  border-radius: 10px;
-  margin: 1px;
-  height: 10px;
-  width: 10px;
-  background-color: white;
+.middle {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 }
 
-span[class~="one"] > span:first-child {
-  background-image: linear-gradient(white, yellow);
+.middle .one {
+  transform: rotate(180deg);
 }
 
-span[class~="two"] > span:nth-child(-n+2) {
-  background-image: linear-gradient(white, yellow);
+.middle .club2 {
+  transform: rotate(180deg);
 }
 
-span[class~="three"] > span {
-  background-image: linear-gradient(white, yellow);
+.middle .three {
+  transform: rotate(180deg);
 }
